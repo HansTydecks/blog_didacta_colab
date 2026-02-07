@@ -1,0 +1,150 @@
+{
+  "common": {
+    "appName": "BlogDidacta",
+    "tagline": "Gemeinsam bloggen. Echt veröffentlichen.",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "dashboard": "Dashboard",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "publish": "Veröffentlichen",
+    "unpublish": "Zurückziehen",
+    "loading": "Laden…",
+    "error": "Ein Fehler ist aufgetreten",
+    "success": "Erfolgreich!",
+    "back": "Zurück",
+    "language": "Sprache",
+    "guide": "Anleitung"
+  },
+  "landing": {
+    "hero": {
+      "title": "Blogeinträge schreiben – wie echte Blogger",
+      "subtitle": "Die Plattform, mit der Schüler:innen gemeinsam Blogeinträge verfassen und mit einem Klick im Internet veröffentlichen.",
+      "cta": "Kostenlos starten",
+      "ctaSecondary": "Mehr erfahren"
+    },
+    "features": {
+      "title": "Warum BlogDidacta?",
+      "collab": {
+        "title": "Echtzeit-Kollaboration",
+        "desc": "Mehrere Schüler:innen arbeiten gleichzeitig am selben Text – wie bei Google Docs."
+      },
+      "publish": {
+        "title": "Echte Veröffentlichung",
+        "desc": "Mit einem Klick wird der Blogeintrag zu einer echten Webseite, die jeder lesen kann."
+      },
+      "simple": {
+        "title": "Kinderleicht zu bedienen",
+        "desc": "Kein technisches Wissen nötig. Lehrkräfte erstellen Zugänge, Kinder schreiben."
+      },
+      "privacy": {
+        "title": "DSGVO-konform",
+        "desc": "Server in Deutschland, keine echten Namen nötig, keine Tracking-Cookies."
+      },
+      "comments": {
+        "title": "Kommentarfunktion",
+        "desc": "Andere Kinder können kommentieren – moderiert durch die Lehrkraft."
+      },
+      "multilang": {
+        "title": "Mehrsprachig",
+        "desc": "Verfügbar auf Deutsch, Englisch und Spanisch – perfekt für den Sprachunterricht."
+      }
+    }
+  },
+  "auth": {
+    "loginTitle": "Willkommen zurück",
+    "loginSubtitle": "Melden Sie sich an, um Ihre Klassen und Blogs zu verwalten.",
+    "registerTitle": "Konto erstellen",
+    "registerSubtitle": "Registrieren Sie sich als Lehrkraft und legen Sie los.",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "displayName": "Anzeigename",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits registriert?",
+    "invalidCredentials": "Ungültige E-Mail oder Passwort.",
+    "emailTaken": "Diese E-Mail ist bereits registriert."
+  },
+  "dashboard": {
+    "welcome": "Willkommen, {name}!",
+    "classrooms": "Meine Klassen",
+    "newClassroom": "Neue Klasse",
+    "classroomName": "Klassenname",
+    "classroomDesc": "Beschreibung (optional)",
+    "posts": "Blogeinträge",
+    "newPost": "Neuer Blogeintrag",
+    "postTitle": "Titel",
+    "noPosts": "Noch keine Blogeinträge. Erstellen Sie den ersten!",
+    "noClassrooms": "Noch keine Klassen. Erstellen Sie die erste!",
+    "copyLink": "Zugangslink kopieren",
+    "linkCopied": "Link kopiert!",
+    "status": {
+      "draft": "Entwurf",
+      "published": "Veröffentlicht",
+      "archived": "Archiviert"
+    },
+    "groupCount": "Anzahl Gruppen",
+    "groupCountHint": "Es werden {count, plural, =1 {1 Blog} other {# Blogs}} erstellt – jede Gruppe bekommt ihren eigenen.",
+    "groups": "Gruppen",
+    "group": "Gruppe",
+    "confirmDelete": "Sind Sie sicher, dass Sie das löschen möchten?",
+    "commentsEnabled": "Kommentare aktiviert",
+    "commentsDisabled": "Kommentare deaktiviert"
+  },
+  "editor": {
+    "joinTitle": "Blog-Zugang",
+    "joinSubtitle": "Gib deinen Namen ein, um mitzuschreiben.",
+    "displayName": "Dein Anzeigename",
+    "join": "Beitreten",
+    "collaborators": "Mitarbeiter:innen",
+    "saving": "Wird gespeichert…",
+    "saved": "Gespeichert",
+    "toolbar": {
+      "bold": "Fett",
+      "italic": "Kursiv",
+      "underline": "Unterstrichen",
+      "heading1": "Überschrift 1",
+      "heading2": "Überschrift 2",
+      "heading3": "Überschrift 3",
+      "bulletList": "Aufzählung",
+      "orderedList": "Nummerierung",
+      "blockquote": "Zitat",
+      "image": "Bild einfügen",
+      "link": "Link",
+      "undo": "Rückgängig",
+      "redo": "Wiederholen"
+    }
+  },
+  "blog": {
+    "by": "Von",
+    "publishedOn": "Veröffentlicht am",
+    "comments": "Kommentare",
+    "writeComment": "Kommentar schreiben",
+    "commentName": "Dein Name",
+    "commentContent": "Dein Kommentar",
+    "submitComment": "Absenden",
+    "commentPending": "Dein Kommentar wird geprüft.",
+    "noComments": "Noch keine Kommentare."
+  },
+  "guide": {
+    "title": "Wie schreibe ich einen Blogeintrag?",
+    "intro": "Ein Blogeintrag ist ein persönlicher Text, den du im Internet veröffentlichst. Hier erfährst du, wie das geht!",
+    "steps": {
+      "s1Title": "1. Thema wählen",
+      "s1Desc": "Wähle ein Thema, das dich interessiert. Das kann ein Erlebnis, eine Meinung oder ein Bericht sein.",
+      "s2Title": "2. Titel finden",
+      "s2Desc": "Dein Titel sollte neugierig machen. Er ist das Erste, was Leser sehen.",
+      "s3Title": "3. Einleitung schreiben",
+      "s3Desc": "Beginne mit 2-3 Sätzen, die das Thema vorstellen und Lust aufs Weiterlesen machen.",
+      "s4Title": "4. Hauptteil verfassen",
+      "s4Desc": "Hier kommt der eigentliche Inhalt. Nutze Absätze, Zwischenüberschriften und Bilder.",
+      "s5Title": "5. Schluss formulieren",
+      "s5Desc": "Fasse zusammen oder stelle eine Frage an die Leser – das regt Kommentare an!",
+      "s6Title": "6. Überprüfen & veröffentlichen",
+      "s6Desc": "Lies deinen Text noch einmal durch. Wenn alles passt, klickt eure Lehrkraft auf 'Veröffentlichen'."
+    }
+  }
+}

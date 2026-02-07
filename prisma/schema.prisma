@@ -1,0 +1,143 @@
+// ─── Prisma Schema for BlogDidacta ───
+// Collaborative blogging platform for classrooms
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ════════════════════════════════════════════════
+// TEACHER ACCOUNTS
+// ════════════════════════════════════════════════
+
+model Teacher {
+  id            String      @id @default(cuid())
+  email         String      @unique
+  passwordHash  String
+  displayName   String
+  language      String      @default("de") // de | en | es
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  classrooms    Classroom[]
+
+  @@map("teachers")
+}
+
+// ════════════════════════════════════════════════
+// CLASSROOMS (groups / courses)
+// ════════════════════════════════════════════════
+
+model Classroom {
+  id          String     @id @default(cuid())
+  name        String
+  description String?
+  teacherId   String
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  teacher     Teacher    @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  posts       BlogPost[]
+
+  @@index([teacherId])
+  @@map("classrooms")
+}
+
+// ════════════════════════════════════════════════
+// BLOG POSTS
+// ════════════════════════════════════════════════
+
+// PostStatus: DRAFT | PUBLISHED | ARCHIVED (stored as String for SQLite)
+
+model BlogPost {
+  id              String      @id @default(cuid())
+  title           String      @default("Untitled")
+  slug            String?     @unique
+  content         String?     // TipTap/ProseMirror JSON document (stored as JSON string)
+  excerpt         String?     // Short preview text
+  coverImage      String?     // Path to cover image
+  status          String      @default("DRAFT") // DRAFT | PUBLISHED | ARCHIVED
+  accessToken     String      @unique @default(cuid()) // unique token for student access link
+  commentsEnabled Boolean     @default(false)
+  language        String      @default("de")
+
+  // ── Group blog support ──
+  assignmentId    String?     // Shared ID to group blogs under one assignment/topic
+  groupNumber     Int?        // Which group this blog belongs to (1, 2, 3...)
+  groupCount      Int         @default(1) // Total number of groups in this assignment
+
+  classroomId     String
+  publishedAt     DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  classroom       Classroom   @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  authors         BlogAuthor[]
+  comments        Comment[]
+  media           Media[]
+
+  @@index([classroomId])
+  @@index([status])
+  @@index([slug])
+  @@index([assignmentId])
+  @@map("blog_posts")
+}
+
+// ════════════════════════════════════════════════
+// BLOG AUTHORS (pseudonymous student contributors)
+// ════════════════════════════════════════════════
+
+model BlogAuthor {
+  id          String   @id @default(cuid())
+  displayName String   // Freely chosen pseudonym
+  color       String   @default("#4c6ef5") // Cursor color for collab
+  blogPostId  String
+  createdAt   DateTime @default(now())
+
+  blogPost    BlogPost @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+
+  @@index([blogPostId])
+  @@map("blog_authors")
+}
+
+// ════════════════════════════════════════════════
+// COMMENTS on published posts
+// ════════════════════════════════════════════════
+
+model Comment {
+  id          String   @id @default(cuid())
+  authorName  String   // Display name (no account needed)
+  content     String
+  approved    Boolean  @default(false) // Teacher must approve
+  blogPostId  String
+  createdAt   DateTime @default(now())
+
+  blogPost    BlogPost @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+
+  @@index([blogPostId])
+  @@map("comments")
+}
+
+// ════════════════════════════════════════════════
+// MEDIA (uploaded images/files)
+// ════════════════════════════════════════════════
+
+model Media {
+  id           String   @id @default(cuid())
+  fileName     String
+  originalName String
+  mimeType     String
+  size         Int      // bytes
+  filePath     String   // relative path in uploads/
+  blogPostId   String
+  uploadedAt   DateTime @default(now())
+
+  blogPost     BlogPost @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+
+  @@index([blogPostId])
+  @@map("media")
+}

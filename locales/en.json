@@ -1,0 +1,150 @@
+{
+  "common": {
+    "appName": "BlogDidacta",
+    "tagline": "Blog together. Publish for real.",
+    "login": "Sign In",
+    "register": "Sign Up",
+    "logout": "Sign Out",
+    "dashboard": "Dashboard",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "publish": "Publish",
+    "unpublish": "Unpublish",
+    "loading": "Loading…",
+    "error": "An error occurred",
+    "success": "Success!",
+    "back": "Back",
+    "language": "Language",
+    "guide": "Guide"
+  },
+  "landing": {
+    "hero": {
+      "title": "Write blog posts – like real bloggers",
+      "subtitle": "The platform where students collaboratively write blog posts and publish them on the internet with a single click.",
+      "cta": "Get Started Free",
+      "ctaSecondary": "Learn More"
+    },
+    "features": {
+      "title": "Why BlogDidacta?",
+      "collab": {
+        "title": "Real-Time Collaboration",
+        "desc": "Multiple students work on the same text simultaneously – just like Google Docs."
+      },
+      "publish": {
+        "title": "Real Publishing",
+        "desc": "One click turns the blog post into a real web page anyone can read."
+      },
+      "simple": {
+        "title": "Easy to Use",
+        "desc": "No technical knowledge needed. Teachers create access, students write."
+      },
+      "privacy": {
+        "title": "GDPR Compliant",
+        "desc": "Servers in Germany, no real names required, no tracking cookies."
+      },
+      "comments": {
+        "title": "Comment Section",
+        "desc": "Other students can comment – moderated by the teacher."
+      },
+      "multilang": {
+        "title": "Multilingual",
+        "desc": "Available in German, English and Spanish – perfect for language classes."
+      }
+    }
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to manage your classes and blogs.",
+    "registerTitle": "Create Account",
+    "registerSubtitle": "Register as a teacher and get started.",
+    "email": "Email Address",
+    "password": "Password",
+    "displayName": "Display Name",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already registered?",
+    "invalidCredentials": "Invalid email or password.",
+    "emailTaken": "This email is already registered."
+  },
+  "dashboard": {
+    "welcome": "Welcome, {name}!",
+    "classrooms": "My Classes",
+    "newClassroom": "New Class",
+    "classroomName": "Class Name",
+    "classroomDesc": "Description (optional)",
+    "posts": "Blog Posts",
+    "newPost": "New Blog Post",
+    "postTitle": "Title",
+    "noPosts": "No blog posts yet. Create your first!",
+    "noClassrooms": "No classes yet. Create your first!",
+    "copyLink": "Copy Access Link",
+    "linkCopied": "Link copied!",
+    "status": {
+      "draft": "Draft",
+      "published": "Published",
+      "archived": "Archived"
+    },
+    "groupCount": "Number of Groups",
+    "groupCountHint": "{count, plural, =1 {1 blog} other {# blogs}} will be created – each group gets their own.",
+    "groups": "Groups",
+    "group": "Group",
+    "confirmDelete": "Are you sure you want to delete this?",
+    "commentsEnabled": "Comments enabled",
+    "commentsDisabled": "Comments disabled"
+  },
+  "editor": {
+    "joinTitle": "Blog Access",
+    "joinSubtitle": "Enter your name to start writing.",
+    "displayName": "Your Display Name",
+    "join": "Join",
+    "collaborators": "Collaborators",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "toolbar": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "bulletList": "Bullet List",
+      "orderedList": "Numbered List",
+      "blockquote": "Quote",
+      "image": "Insert Image",
+      "link": "Link",
+      "undo": "Undo",
+      "redo": "Redo"
+    }
+  },
+  "blog": {
+    "by": "By",
+    "publishedOn": "Published on",
+    "comments": "Comments",
+    "writeComment": "Write a comment",
+    "commentName": "Your Name",
+    "commentContent": "Your Comment",
+    "submitComment": "Submit",
+    "commentPending": "Your comment is awaiting review.",
+    "noComments": "No comments yet."
+  },
+  "guide": {
+    "title": "How do I write a blog post?",
+    "intro": "A blog post is a personal text you publish on the internet. Here's how it works!",
+    "steps": {
+      "s1Title": "1. Choose a Topic",
+      "s1Desc": "Pick a topic that interests you. It can be an experience, opinion, or report.",
+      "s2Title": "2. Find a Title",
+      "s2Desc": "Your title should spark curiosity. It's the first thing readers see.",
+      "s3Title": "3. Write an Introduction",
+      "s3Desc": "Start with 2-3 sentences that introduce the topic and make readers want more.",
+      "s4Title": "4. Write the Main Body",
+      "s4Desc": "This is where the real content goes. Use paragraphs, subheadings, and images.",
+      "s5Title": "5. Write a Conclusion",
+      "s5Desc": "Summarize or ask readers a question – this encourages comments!",
+      "s6Title": "6. Review & Publish",
+      "s6Desc": "Read through your text one more time. When everything's good, your teacher clicks 'Publish'."
+    }
+  }
+}

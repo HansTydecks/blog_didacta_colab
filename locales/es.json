@@ -1,0 +1,150 @@
+{
+  "common": {
+    "appName": "BlogDidacta",
+    "tagline": "Bloguear juntos. Publicar de verdad.",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "dashboard": "Panel",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "publish": "Publicar",
+    "unpublish": "Despublicar",
+    "loading": "Cargando…",
+    "error": "Se produjo un error",
+    "success": "¡Éxito!",
+    "back": "Volver",
+    "language": "Idioma",
+    "guide": "Guía"
+  },
+  "landing": {
+    "hero": {
+      "title": "Escribe entradas de blog – como bloggers de verdad",
+      "subtitle": "La plataforma donde los estudiantes escriben entradas de blog de forma colaborativa y las publican en internet con un solo clic.",
+      "cta": "Empezar gratis",
+      "ctaSecondary": "Más información"
+    },
+    "features": {
+      "title": "¿Por qué BlogDidacta?",
+      "collab": {
+        "title": "Colaboración en tiempo real",
+        "desc": "Varios estudiantes trabajan en el mismo texto simultáneamente – como Google Docs."
+      },
+      "publish": {
+        "title": "Publicación real",
+        "desc": "Un clic convierte la entrada del blog en una página web real que cualquiera puede leer."
+      },
+      "simple": {
+        "title": "Fácil de usar",
+        "desc": "No se necesitan conocimientos técnicos. Los profesores crean accesos, los estudiantes escriben."
+      },
+      "privacy": {
+        "title": "Compatible con RGPD",
+        "desc": "Servidores en Alemania, no se necesitan nombres reales, sin cookies de seguimiento."
+      },
+      "comments": {
+        "title": "Sección de comentarios",
+        "desc": "Otros estudiantes pueden comentar – moderado por el profesor."
+      },
+      "multilang": {
+        "title": "Multilingüe",
+        "desc": "Disponible en alemán, inglés y español – perfecto para clases de idiomas."
+      }
+    }
+  },
+  "auth": {
+    "loginTitle": "Bienvenido de nuevo",
+    "loginSubtitle": "Inicia sesión para gestionar tus clases y blogs.",
+    "registerTitle": "Crear cuenta",
+    "registerSubtitle": "Regístrate como profesor y empieza.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "displayName": "Nombre para mostrar",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya estás registrado?",
+    "invalidCredentials": "Correo o contraseña incorrectos.",
+    "emailTaken": "Este correo ya está registrado."
+  },
+  "dashboard": {
+    "welcome": "¡Bienvenido, {name}!",
+    "classrooms": "Mis clases",
+    "newClassroom": "Nueva clase",
+    "classroomName": "Nombre de la clase",
+    "classroomDesc": "Descripción (opcional)",
+    "posts": "Entradas del blog",
+    "newPost": "Nueva entrada",
+    "postTitle": "Título",
+    "noPosts": "Aún no hay entradas. ¡Crea la primera!",
+    "noClassrooms": "Aún no hay clases. ¡Crea la primera!",
+    "copyLink": "Copiar enlace de acceso",
+    "linkCopied": "¡Enlace copiado!",
+    "status": {
+      "draft": "Borrador",
+      "published": "Publicado",
+      "archived": "Archivado"
+    },
+    "groupCount": "Número de grupos",
+    "groupCountHint": "Se crearán {count, plural, =1 {1 blog} other {# blogs}} – cada grupo recibirá el suyo.",
+    "groups": "Grupos",
+    "group": "Grupo",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar esto?",
+    "commentsEnabled": "Comentarios activados",
+    "commentsDisabled": "Comentarios desactivados"
+  },
+  "editor": {
+    "joinTitle": "Acceso al blog",
+    "joinSubtitle": "Ingresa tu nombre para empezar a escribir.",
+    "displayName": "Tu nombre para mostrar",
+    "join": "Unirse",
+    "collaborators": "Colaboradores",
+    "saving": "Guardando…",
+    "saved": "Guardado",
+    "toolbar": {
+      "bold": "Negrita",
+      "italic": "Cursiva",
+      "underline": "Subrayado",
+      "heading1": "Título 1",
+      "heading2": "Título 2",
+      "heading3": "Título 3",
+      "bulletList": "Lista con viñetas",
+      "orderedList": "Lista numerada",
+      "blockquote": "Cita",
+      "image": "Insertar imagen",
+      "link": "Enlace",
+      "undo": "Deshacer",
+      "redo": "Rehacer"
+    }
+  },
+  "blog": {
+    "by": "Por",
+    "publishedOn": "Publicado el",
+    "comments": "Comentarios",
+    "writeComment": "Escribe un comentario",
+    "commentName": "Tu nombre",
+    "commentContent": "Tu comentario",
+    "submitComment": "Enviar",
+    "commentPending": "Tu comentario está pendiente de revisión.",
+    "noComments": "Aún no hay comentarios."
+  },
+  "guide": {
+    "title": "¿Cómo escribo una entrada de blog?",
+    "intro": "Una entrada de blog es un texto personal que publicas en internet. ¡Así es cómo funciona!",
+    "steps": {
+      "s1Title": "1. Elige un tema",
+      "s1Desc": "Elige un tema que te interese. Puede ser una experiencia, una opinión o un informe.",
+      "s2Title": "2. Encuentra un título",
+      "s2Desc": "Tu título debe despertar curiosidad. Es lo primero que ven los lectores.",
+      "s3Title": "3. Escribe una introducción",
+      "s3Desc": "Comienza con 2-3 frases que presenten el tema y den ganas de seguir leyendo.",
+      "s4Title": "4. Escribe el cuerpo principal",
+      "s4Desc": "Aquí va el contenido real. Usa párrafos, subtítulos e imágenes.",
+      "s5Title": "5. Escribe una conclusión",
+      "s5Desc": "Resume o haz una pregunta a los lectores – ¡eso fomenta los comentarios!",
+      "s6Title": "6. Revisa y publica",
+      "s6Desc": "Lee tu texto una vez más. Cuando todo esté bien, tu profesor hace clic en 'Publicar'."
+    }
+  }
+}

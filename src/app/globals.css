@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════
+   BlogDidacta — Glassy Modern Design System
+   ═══════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
+    --brand-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 50%, #dce2ee 100%);
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a4a6a;
+    --text-muted: #8888a8;
+    --accent: #4c6ef5;
+    --accent-light: #748ffc;
+    --success: #37b24d;
+    --warning: #f59f00;
+    --danger: #f03e3e;
+    --radius: 1rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(76, 110, 245, 0.25);
+    color: var(--text-primary);
+  }
+}
+
+@layer components {
+  /* ── Glass Card ── */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--radius);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border-radius: var(--radius);
+  }
+
+  .glass-dark {
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border-radius: var(--radius);
+    color: #fff;
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium
+           transition-all duration-200 ease-out
+           rounded-xl px-5 py-2.5 text-sm
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2
+           disabled:opacity-50 disabled:pointer-events-none
+           active:scale-[0.97];
+  }
+
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-brand-600 to-brand-700 text-white
+           hover:from-brand-500 hover:to-brand-600
+           shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40;
+  }
+
+  .btn-secondary {
+    @apply btn glass text-brand-700
+           hover:bg-white/80;
+  }
+
+  .btn-ghost {
+    @apply btn text-gray-600 hover:bg-white/50 hover:text-gray-900;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-500 text-white hover:bg-red-600 shadow-lg shadow-red-500/25;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs rounded-lg;
+  }
+
+  .btn-lg {
+    @apply px-8 py-3.5 text-base rounded-2xl;
+  }
+
+  /* ── Inputs ── */
+  .input {
+    @apply w-full rounded-xl border border-white/30 bg-white/50
+           px-4 py-2.5 text-sm
+           backdrop-blur-sm
+           placeholder:text-gray-400
+           focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:border-brand-400
+           transition-all duration-200;
+  }
+
+  .input-error {
+    @apply border-red-300 focus:ring-red-500/40 focus:border-red-400;
+  }
+
+  /* ── Label ── */
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1.5;
+  }
+
+  /* ── Badge ── */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-brand {
+    @apply badge bg-brand-100 text-brand-700;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-green-700;
+  }
+
+  .badge-warning {
+    @apply badge bg-yellow-100 text-yellow-700;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-100 text-red-700;
+  }
+
+  /* ── Background blobs (decorative) ── */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .blob-1 {
+    @apply blob;
+    width: 400px;
+    height: 400px;
+    background: rgba(76, 110, 245, 0.3);
+    top: -100px;
+    right: -100px;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    @apply blob;
+    width: 350px;
+    height: 350px;
+    background: rgba(118, 75, 162, 0.25);
+    bottom: -50px;
+    left: -100px;
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  .blob-3 {
+    @apply blob;
+    width: 300px;
+    height: 300px;
+    background: rgba(55, 178, 77, 0.2);
+    top: 50%;
+    left: 50%;
+    animation: float 12s ease-in-out infinite;
+  }
+
+  /* ── Prose (blog content) ── */
+  .prose-blog {
+    @apply text-gray-800 leading-relaxed;
+  }
+
+  .prose-blog h1 {
+    @apply text-3xl font-bold mt-8 mb-4 text-gray-900;
+  }
+
+  .prose-blog h2 {
+    @apply text-2xl font-semibold mt-6 mb-3 text-gray-900;
+  }
+
+  .prose-blog h3 {
+    @apply text-xl font-semibold mt-5 mb-2 text-gray-900;
+  }
+
+  .prose-blog p {
+    @apply mb-4;
+  }
+
+  .prose-blog ul, .prose-blog ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose-blog ul {
+    @apply list-disc;
+  }
+
+  .prose-blog ol {
+    @apply list-decimal;
+  }
+
+  .prose-blog li {
+    @apply mb-1;
+  }
+
+  .prose-blog blockquote {
+    @apply border-l-4 border-brand-400 pl-4 italic text-gray-600 my-4;
+  }
+
+  .prose-blog img {
+    @apply rounded-2xl my-6 max-w-full shadow-lg;
+  }
+
+  .prose-blog a {
+    @apply text-brand-600 underline underline-offset-2 hover:text-brand-800;
+  }
+
+  .prose-blog code {
+    @apply bg-gray-100 rounded px-1.5 py-0.5 text-sm font-mono;
+  }
+
+  .prose-blog pre {
+    @apply bg-gray-900 text-gray-100 rounded-xl p-4 overflow-x-auto my-4;
+  }
+
+  .prose-blog hr {
+    @apply border-gray-200 my-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-purple-600;
+  }
+
+  .animate-in {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+}
+
+/* ── TipTap Editor Styles ── */
+.tiptap {
+  @apply outline-none min-h-[300px] p-4;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  @apply text-gray-400 float-left h-0 pointer-events-none;
+  content: attr(data-placeholder);
+}
+
+/* Collaboration cursor */
+.collaboration-cursor__caret {
+  border-left: 2px solid;
+  border-right: 0;
+  margin-left: -1px;
+  margin-right: -1px;
+  pointer-events: none;
+  position: relative;
+  word-break: normal;
+}
+
+.collaboration-cursor__label {
+  border-radius: 6px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  left: -1px;
+  line-height: 1;
+  padding: 2px 6px;
+  position: absolute;
+  top: -1.4em;
+  user-select: none;
+  white-space: nowrap;
+}
